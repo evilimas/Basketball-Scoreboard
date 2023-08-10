@@ -46,6 +46,7 @@ newGameBtn.addEventListener("click", function(){
     guestScore = 0
     guestScoreEl.textContent = guestScore
     homeScoreEl.textContent = homeScore
+    winner()
 })
 //Wining team
 function winner(){
