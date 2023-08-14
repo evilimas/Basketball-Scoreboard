@@ -8,30 +8,30 @@
 </head>
 <body>
     <div class="container">
-        <div id="home">
+        <div class="home">
             <h3>HOME</h3>
             <div class="score-container">
                  <h2 id="home-score">0</h2>
              </div>
             <div>
-                <button id="home-plus1" onclick="increaseHomeScoreByOne()">+1</button>
-                <button id="home-plus2" onclick="increaseHomeScoreByTwo()">+2</button>
-                <button id="home-plus3" onclick="increaseHomeScoreByThree()">+3</button>
+                <button onclick="increaseHomeScore(1)">+1</button>
+                <button onclick="increaseHomeScore(2)">+2</button>
+                <button onclick="increaseHomeScore(3)">+3</button>
              </div>
         </div>
-        <div id="guest">
+        <div class="guest">
             <h3>GUEST</h3>
             <div class="score-container">
                 <h2 id="guest-score">0</h2>
              </div>
             <div>
-                <button id="guest-plus1" onclick="increaseGuestScoreByOne()">+1</button>
-                <button id="guest-plus2" onclick="increaseGuestScoreByTwo()">+2</button>
-                <button id="guest-plus3" onclick="increaseGuestScoreByThree()">+3</button>
+                <button onclick="increaseGuestScore(1)">+1</button>
+                <button onclick="increaseGuestScore(2)">+2</button>
+                <button onclick="increaseGuestScore(3)">+3</button>
             </div>
         </div>
     </div>
-    <button id="new-game">New Game</button>
+    <button class="new-game-btn" id="new-game">New Game</button>
 
     <script src="script.js"></script>
 </body>

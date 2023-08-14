@@ -2,18 +2,8 @@
 let homeScoreEl = document.getElementById("home-score");
 let homeScore = 0;
 
-function increaseHomeScoreByOne(){
-    homeScore += 1
-    homeScoreEl.textContent = homeScore
-    winner()
-}
-function increaseHomeScoreByTwo(){
-    homeScore += 2
-    homeScoreEl.textContent = homeScore
-    winner()
-}
-function increaseHomeScoreByThree(){
-    homeScore += 3
+function increaseHomeScore(score){
+    homeScore += score
     homeScoreEl.textContent = homeScore
     winner()
 }
@@ -22,18 +12,8 @@ function increaseHomeScoreByThree(){
 let guestScoreEl = document.getElementById("guest-score")
 let guestScore = 0
 
-function increaseGuestScoreByOne(){
-    guestScore += 1
-    guestScoreEl.textContent = guestScore
-    winner()
-}
-function increaseGuestScoreByTwo(){
-    guestScore += 2
-    guestScoreEl.textContent = guestScore
-    winner()
-}
-function increaseGuestScoreByThree(){
-    guestScore += 3
+function increaseGuestScore(score){
+    guestScore += score
     guestScoreEl.textContent = guestScore
     winner()
 }
@@ -51,16 +31,16 @@ newGameBtn.addEventListener("click", function(){
 //Wining team
 function winner(){
     if(homeScore > guestScore){
-        homeScoreEl.style.border = "2px solid #0000FF"
-        guestScoreEl.style.border = "none"
+        homeScoreEl.style.border = "2px solid yellow"
+        guestScoreEl.style.border = "2px solid transparent"
 
     } else if(guestScore > homeScore) {
-        guestScoreEl.style.border = "2px solid #0000FF"
-        homeScoreEl.style.border = "none"
+        guestScoreEl.style.border = "2px solid yellow"
+        homeScoreEl.style.border = "2px solid transparent"
 
     } else{
-        homeScoreEl.style.border = "none"
-        guestScoreEl.style.border = "none"
+        homeScoreEl.style.border = "2px solid transparent"
+        guestScoreEl.style.border = "2px solid transparent"
     }
 
 }
